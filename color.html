@@ -1,0 +1,55 @@
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.md5.js"></script>
+	<script type="text/javascript" src="js/tinycolor.js"></script>
+	<script type="text/javascript" src="js/jquery.modal.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.modal.css">
+	<title>Color of the Day</title>
+	<style type="text/css">
+		body {background-color: #FFF; font-family: Verdana, Geneva, sans-serif; font-size: .8em;}
+		p {text-align: center;}
+		.stamp {height: 200px; width: 500px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;}
+		.info {font-size: 30px;}
+		.code {font-size: 20px;}
+		footer {position: absolute; bottom: 0; left: 0; right: 0; text-align: center;}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var all = new Date();
+			var day = all.getDate();
+			var mnth = all.getMonth();
+			var yr = all.getFullYear();
+			var date = (day.toString() + mnth.toString() + yr.toString());
+			var hex = $.md5(date);
+			var code = "#" + hex.substr(0,6);
+			var t = tinycolor(code);
+			var rgb = t.toRgbString();
+			var hsv = t.toHsvString();
+			$("body").css('background-color', code);
+			$(".hex").append(code);
+			$(".rgb").append(rgb);
+			$(".hsv").append(hsv);
+			var alert = html("<p>")
+			// $(".credits").modal();
+		});
+	</script>
+</head>
+<body>
+	<div class='stamp'>
+		<p class='info'>The color of the day is</p>
+		<p class='code hex'></p>
+		<p class='code rgb'></p>
+		<p class='code hsv'></p>
+	</div>
+	<footer>
+		<a href='#c' rel='modal:open'>credits</a>
+		<div class='modal' id='c'>
+			<h3>Things that made this site</h3>
+			<a href='https://github.com/placemarker/jQuery-MD5'>Jquery-MD5</a><br>
+			<a href='http://bgrins.github.io/TinyColor/'>Tinycolor</a><br>
+			<a href='#'>Aleks Christensen</a>
+		</div>
+	</footer>
+</body>
+</html>
