@@ -3,43 +3,10 @@
 	<script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery.md5.js"></script>
 	<script type="text/javascript" src="js/tinycolor.js"></script>
-	<script type="text/javascript" src="js/jquery.modal.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/jquery.modal.css">
+	<script type="text/javascript" src='js/color.js'></script>
+	<script type="text/javascript" src='js/slide.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/colour.css">
 	<title>Color of the Day</title>
-	<style type="text/css">
-		body {background-color: #FFF; font-family: Verdana, Geneva, sans-serif; text-align: center;}
-		.stamp {height: 200px; width: 500px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;}
-		.info {font-size: 30px;}
-		.code {font-size: 20px;}
-		footer {position: absolute; bottom: 0; left: 0; right: 0; margin-bottom: 10px;}
-		#link {padding: 2px 10px; -moz-transition: text-shadow .3s, -moz-transition .3s; -webkit-transition: text-shadow .3s, -webkit-transition .3s; -o-transition: text-shadow .3s, -o-transition .3s; transition: text-shadow .3s, transition .3s;}
-		.dark:link, .dark:visited {font-size: 20px; color: #000; text-decoration: none;}
-		.dark:hover, .dark:active {text-shadow: 0px 0px 2px #333; text-shadow: 0px 0px 6px #333;}
-		.light:link, .light:visited {font-size: 20px; color: #FFF; text-decoration: none;}
-		.light:hover, .light:active {text-shadow: 0px 0px 2px #EEE; text-shadow: 0px 0px 6px #EEE;}
-	</style>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			var all = new Date();
-			var code = "#" + $.md5((all.getDate().toString() + all.getMonth().toString() + all.getFullYear().toString())).substr(0,6);
-			var rgb = tinycolor(code).toRgbString();
-			var hsv = tinycolor(code).toHsvString();
-			$("body").css('background-color', code);
-			$(".hex").append(code);
-			$(".rgb").append(rgb);
-			$(".hsv").append(hsv);
-			var rgb = tinycolor(code).toRgb();
-			var col = (rgb.r + rgb.g + rgb.b) / 3;
-			if(col <= 128) {
-				$("body").css('color', '#FFF');
-				$("#link").attr("class","light");
-
-			} else {
-				$("body").css('color', '#000');
-				$("#link").attr("class","dark");
-			}
-		});
-	</script>
 </head>
 <body>
 	<div class='stamp'>
@@ -49,12 +16,12 @@
 		<p class='code hsv'></p>
 	</div>
 	<footer>
-		<a id='link' href='#credits' rel='modal:open'>?</a>
-		<div class='modal' id='credits'>
+		<a id='link' href='#'>?</a>
+		<div id='credits'>
 			<h3>Things that made this site</h3>
-			<a href='https://github.com/placemarker/jQuery-MD5'>Jquery-MD5</a><br>
-			<a href='http://bgrins.github.io/TinyColor/'>Tinycolor</a><br>
-			<a href='#'>Aleks Christensen</a>
+			<a href='http://github.com/placemarker/jQuery-MD5'>Jquery-MD5</a><br>
+			<a href='http://github.com/bgrins/TinyColor'>Tinycolor</a><br>
+			<a href='http://github.com/quylaa'>Quylaa</a>
 		</div>
 	</footer>
 </body>
