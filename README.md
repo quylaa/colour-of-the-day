@@ -8,7 +8,7 @@
     <li><a href='http://bgrins.github.io/TinyColor/'>Tinycolor</a></li>
     <li><a href='http://github.com/kylefox/jquery-modal'>jQuery Modal</a></li>
   </ul>
-<h1>To-do</h1>
+<h1>Todo</h1>
   <ul>
     <li>Consolidate Javascript code</li>
     <li>Get jQuery built-in dialog to replace external modal script</li>
