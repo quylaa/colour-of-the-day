@@ -9,9 +9,9 @@
   </ul>
 <h1>Todo</h1>
   <ul>
-    <s><li>Consolidate Javascript code</li></s>
-    <s><li>Get jQuery built-in dialog to replace external modal script</li></s>
-    <s><li>Make page prettier</li></s>
+    <del><li>Consolidate Javascript code</li></del>
+    <del><li>Get jQuery built-in dialog to replace external modal script</li></del>
+    <del><li>Make page prettier</li></del>
     <li>Make page even prettier</li>
     <li>Perhaps make the text do something along the lines of what <a href='colourco.de'>Colourco.de</a> does</li>
   </ul>
