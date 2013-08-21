@@ -1,2 +1,7 @@
+v0.2 2013-8-20
+   -Removed the need for a modal plugin
+   -Changed the credits links
+   -Cleaned up the code
+
 v0.1 2013-06-20
    -Pushed to Git
